@@ -1,0 +1,59 @@
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.icon {
+    font-size: 24px;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+.number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #28a745;
+    margin: 10px 0;
+}
+
+.label {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #005fa3;
+}
+
+
+    .admin-heading {
+        font-family: Arial, sans-serif;
+        font-size: 2em;
+        color: #4CAF50; /* Green color */
+        text-align: center;
+        margin-top: 100px;
+    }
+

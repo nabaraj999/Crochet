@@ -1,0 +1,133 @@
+/* About Section Styles */
+.about {
+   
+    background-color: #fff9f5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about h2 {
+    text-align: center;
+    color: #2c1810;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+.about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e6846f;
+    margin: 15px auto;
+}
+
+.about p {
+    color: #5a4a42;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.crochet-section, .yarn-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    align-items: center;
+}
+
+.crochet-image img, .yarn-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.crochet-image img:hover, .yarn-image img:hover {
+    transform: scale(1.02);
+}
+
+.crochet-content h2, .yarn-text h1 {
+    color: #2c1810;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Types of Yarn Section */
+h1 u {
+    color: #2c1810;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #e6846f;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+/* Floating Widget Styles */
+.floating-widget {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.like-btn, .share-btn {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-btn:hover, .share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share-options {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.share-options a {
+    display: block;
+    padding: 8px 15px;
+    color: #5a4a42;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.share-options a:hover {
+    color: #e6846f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crochet-section, .yarn-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .about h2 {
+        font-size: 2rem;
+    }
+    
+    .crochet-content h2, .yarn-text h1 {
+        font-size: 1.8rem;
+    }
+}

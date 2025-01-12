@@ -1,0 +1,146 @@
+/* Reset and base styles */
+
+
+/* Header styles */
+collection{
+    text-align: center;
+    color: #2c3e50;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+.collection::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+/* Category filter styles */
+form {
+    text-align: center;
+    margin: 2rem 0;
+    margin-top: 40px;
+}
+
+select {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background: #f8f9fa;
+    box-shadow: 0 2px 15px rgba(52, 152, 219, 0.2);
+}
+
+select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* Product container grid - Modified for exactly 5 cards per row */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Product card styles */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+    width: 100%; /* Ensure cards take full width of their grid cell */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card p {
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+
+    select {
+        width: 90%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,46 @@
+.pattern-container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;;
+}
+
+.pattern-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pattern-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pattern-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.pattern-card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #4CAF50;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.pattern-card a:hover {
+    background: #45a049;
+}
