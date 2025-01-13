@@ -10,10 +10,6 @@ $result = $conn->query($sql);
 // Start the session
 session_start();
 
-// Example: Set a username in the session (only for testing)
-// $_SESSION['username'] = "JohnDoe";
-
-// Check if the user is logged in
 $isLoggedIn = isset($_SESSION['username']);
 $username = $isLoggedIn ? $_SESSION['username'] : "Guest";
 ?>

@@ -47,6 +47,7 @@ $username = $isLoggedIn ? $_SESSION['username'] : "Guest";
         <a href="collection.php">Collection</a>
         <a href="manage_users.php">manage_users</a>
         <a href="free_pattern.php">pattern</a>
+        <a href="view_patterns.php">Edit pattern</a>
         <a href="feedback.php">Feedback</a>
     </nav>
     <div class="user-actions">
